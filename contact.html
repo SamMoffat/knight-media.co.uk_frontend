@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="ISO-8859-1">
+	<title>Knight Media</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"></link>
+	<link rel="stylesheet" type="text/css" href="css/General.css"></link>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="js/test.js"></script>
+	<script>
+		function doTheFunction(){
+			xmlhttp = new XMLHttpRequest();
+			xmlhttp.open("GET","hello",true);
+			xmlhttp.send();
+		}
+	</script>
+	<style>
+		@font-face {
+			font-family: "myfont";
+			src: url("fonts/TRAJANPRO3-REGULAR.woff") format('woff');
+		}
+		mark {
+			background-color: transparent;
+			color: yellow;
+		}
+		span {
+			text-align: center;
+		}
+		#title {
+			margin-top: 20px;
+			font-size: 4em;
+			text-align: center;
+		}
+		#subtitle {
+			margin-top: 20px;
+			font-size: 3em;
+			text-align: center;
+		}
+		#text {
+			font-size: 1.3em;
+			text-align: center;
+		}
+		#link {
+			text-align: center;
+			font-size: 1em;
+			color: yellow;
+		}
+		#link:hover {
+			color: orange;
+			cursor: pointer;
+			text-decoration: none;
+		}
+		#category-link {
+			text-align: center;
+			font-size: 1.5em;
+			color: yellow;
+			padding-top: 20px;
+			padding-bottom: 10px;
+			border-style: solid;
+			border-color: yellow;
+			color: yellow;
+			margin-bottom: 10px;
+			
+		}
+		#catagory-link:active{
+			background-color: blue;
+			color: blue;
+		}
+		.footer {
+			background-color: #321347;
+			color: grey;
+		}
+		body, p, br, .container {
+			font-family: myfont;
+			font-weight: 200;
+		}	
+		body {
+			background: purple; /* For browsers that do not support gradients */
+			background: -webkit-radial-gradient(#652D90, #290243, #1E0032); /* Safari 5.1 to 6.0 */
+			background: -o-radial-gradient(#652D90, #290243, #1E0032); /* For Opera 11.6 to 12.0 */
+			background: -moz-radial-gradient(#652D90, #290243, #1E0032); /* For Firefox 3.6 to 15 */
+			background: radial-gradient(#652D90, #290243, #1E0032); /* Standard syntax */
+			color: white;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+		}
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			
+		}
+		li {
+			float: left;
+		}
+		li a {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+		#yellow {
+			color: yellow;
+			
+		}
+		#yellow:hover {
+			color: orange;
+			text-decoration: none;
+		}
+		#white {
+			color: white;
+			padding-left: 2.5em;
+			padding-right: 2.5em;
+			font-size: 1.8em;			
+		}
+		#white:hover {
+			color: yellow;
+			text-decoration: none;
+		}
+		.red{
+			color:red;
+		}
+	</style>
+	</head>
+	<body>
+		<div class="container" style="padding-top: 10px; padding-bottom: 10px;text-align: center; border-color: yellow; border-bottom-style: solid; border-bottom-width: 2px">
+				<a id="white" class="active" href="index.html">Home</a>	
+				<a id="white" href="services.html">Services</a>
+				<a id="white" href="contact.html">Contact</a>
+		</div>
+		<div class="container-fluid" style="margin-bottom: 10em">
+			<div class="col-sm-3">
+			</div>
+			<div class="col-sm-6">
+				<div class="row">
+					<a href="index.html"><img src="img/KMLogo.png" height="100%" width="100%" align="center" style="justify-content: center"> </a>
+				</div>
+				<div id="title" style="text-align: center;">
+					Contact Us
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+					</div>
+					<div class="col-md-6">
+						<div class="form-area">  
+							<form action="/knightMedia/php/email.php" method="post">
+							<br style="clear:both">
+								<h3 style="margin-bottom: 25px; text-align: center;">Contact Form</h3>
+								<div class="form-group">
+									<input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name" required>
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name" required>
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" id="telephone" name="telephone" placeholder="Mobile Number" required>
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" id="subject" name="title" placeholder="Subject" required>
+								</div>
+								<div class="form-group">
+								<textarea class="form-control" type="textarea" id="message" name="message" placeholder="Message" maxlength="140" rows="7"></textarea>
+									<span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>                    
+								</div>
+								<button type="submit" id="submit" name="submit" class="btn btn-primary pull-right">Submit Form</button>
+							</form>
+						</div>
+					</div>
+					<div class="col-md-3">
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3">
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container" style="font-size: 1em">
+				<table>
+					<tr>
+						<th style="padding-right: 10px">Contact:</th>
+						<th>Jamie Francis</th>
+					</tr>
+					<tr>
+						<th>Email:</th>
+						<th>jamie@knight-media.co.uk</th>
+					</tr>
+					<tr>
+						<th>Phone:</th>
+						<th>07528427027</th>
+					</tr>
+				</table>
+				<p align="right"><a id="link" href="terms-and-conditions.html">Terms of Service
+			</div>
+		</footer>
+	</body>
+</html>
