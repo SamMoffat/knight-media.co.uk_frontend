@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<meta charset="ISO-8859-1">
 	<title>Knight Media</title>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"></link>
@@ -81,10 +82,13 @@
 			background: -webkit-radial-gradient(#652D90, #290243, #1E0032); /* Safari 5.1 to 6.0 */
 			background: -o-radial-gradient(#652D90, #290243, #1E0032); /* For Opera 11.6 to 12.0 */
 			background: -moz-radial-gradient(#652D90, #290243, #1E0032); /* For Firefox 3.6 to 15 */
-			background: radial-gradient(#652D90, #290243, #1E0032); /* Standard syntax */
 			color: white;
-			background-repeat: no-repeat;
-			background-attachment: fixed;
+			background-image: url('img/test.png');
+			background-repeat: repeat;
+			background-position: center;
+			box-shadow: 100px 100px #888888;
+			background-image: linear-gradient(to right, #1E0032, #502170, #1E0032),url('img/test.png');
+			background-blend-mode:darken;
 		}
 		ul {
 			list-style-type: none;
@@ -111,6 +115,14 @@
 			color: orange;
 			text-decoration: none;
 		}
+		#white-side {
+			text-align: right;
+			display: block;
+			color: white;
+			padding-left: 2.5em;
+			padding-right: 2.5em;
+			font-size: 1.8em;			
+		}
 		#white {
 			color: white;
 			padding-left: 2.5em;
@@ -122,21 +134,46 @@
 			text-decoration: none;
 			
 		}
+		#white-side:hover {
+			color: yellow;
+			text-decoration: none;
+			
+		}
+		#right-text {
+			position: absolute;
+		    bottom: 8px;
+		    right: 16px;
+		}
+		#banner-container {
+			position: relative;
+			text-align: center;
+		}
+		#top-text {
+			text-align: center;
+		}
 	</style>
 	</head>
 	<body>
-		<div class="container" style="padding-top: 10px; padding-bottom: 10px;text-align: center; border-bottom-width: 2px">
+
+	<div class="row" id='top-text' style="text-align: center;" hidden>
 			<a id="white" class="active" href="index.html">Home</a>	
 			<a id="white" href="services.html">Services</a>
 			<a id="white" href="contact.html">Contact</a>
+		</div>
+		<div class="row" id="banner-container">
+			<a href="index.html"><img id="headerimage" src="img/Banner.jpg" width="100%" align="center" style="justify-content: center" hidden> </a>
+			<a href="index.html"><img id="headerimage2" src="img/KMLogo.png" width="100%" align="center" style="justify-content: center" hidden> </a>
+			<div id="right-text" hidden>
+				<p><a id="white-side"  class="active" href="index.html">Home</a>	
+				<p><a id="white-side" href="services.html">Services</a>
+				<p><a id="white-side" href="contact.html">Contact</a>
+			</div>
 		</div>
 		<div class="container-fluid" style="margin-bottom: 10em">
 			<div class="col-md-3">
 			</div>
 			<div class="col-md-6">
-				<div class="row">
-					<a href="index.html"><img src="img/KMLogo.png" height="100%" width="100%" align="center" style="justify-content: center"> </a>
-				</div>
+			
 				<div class="row">
 					<div class="container-fluid">
 						<div class="col-md-4" style="padding-right:20px">
@@ -233,4 +270,5 @@
 			</div>
 		</footer>
 	</body>
+	<script src='js/banner.js'></script>
 </html>
